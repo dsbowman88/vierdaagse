@@ -15,7 +15,16 @@ class CreateSchoolsTable extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('schoolname');
+            $table->unsignedInteger('number');
+            $table->string('contactperson');
+            $table->string('email');
+            $table->string('telephonenumber');
+
             $table->timestamps();
+
+            $table->foreign('tour_id')->references('id')->on('tours');
+
         });
     }
 
