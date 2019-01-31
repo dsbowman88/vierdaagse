@@ -14,7 +14,8 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        //
+        return view('school.index');
+
     }
 
     /**
@@ -36,7 +37,14 @@ class SchoolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        School::create(request()->validate([
+            'schoolname' => 'required',
+            'group_size' => 'required',
+            'contact' => 'required',
+            'email' => 'required',
+            'phonenumber' => 'required',
+            'tour_id' => 'required',
+            'user_id' => auth()->id()]));
     }
 
     /**
@@ -47,7 +55,7 @@ class SchoolController extends Controller
      */
     public function show(School $school)
     {
-        //
+        return view('school.show');
     }
 
     /**
@@ -58,7 +66,7 @@ class SchoolController extends Controller
      */
     public function edit(School $school)
     {
-        //
+        return view('school.edit');
     }
 
     /**
