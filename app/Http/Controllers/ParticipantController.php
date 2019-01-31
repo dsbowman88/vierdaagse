@@ -14,7 +14,7 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        //
+        return view('participant.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ParticipantController extends Controller
      */
     public function create()
     {
-        //
+        return view('participant.create');
     }
 
     /**
@@ -35,7 +35,11 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Participant::create(request()->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'tour_id' => 'required',
+            'user_id' => auth()->id()]));
     }
 
     /**
