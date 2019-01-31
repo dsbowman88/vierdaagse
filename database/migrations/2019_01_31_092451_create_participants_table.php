@@ -17,8 +17,8 @@ class CreateParticipantsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email');
-            $table->unsignedInteger('school'); //FK
-            $table->unsignedInteger('tour'); //FK
+            $table->unsignedInteger('school_id'); //FK
+            $table->unsignedInteger('tour_id'); //FK
             $table->timestamps();
 
             $table->foreign('school_id')->references('id')->on('schools');
