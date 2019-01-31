@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('participant', 'ParticipantController')->middleware('auth');
 Route::resource('school', 'SchoolController')->middleware('auth');
+Route::get('/tour', 'TourController@index');
+Route::get('/tour/{tour}', 'TourController@show');
