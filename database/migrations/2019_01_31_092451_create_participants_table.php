@@ -15,7 +15,14 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('email');
+            $table->unsignedInteger('school'); //FK
+            $table->unsignedInteger('tour'); //FK
             $table->timestamps();
+
+            $table->foreign('school_id')->references('id')->on('schools');
+            $table->foreign('tour_id')->references('id')->on('tours');
         });
     }
 
