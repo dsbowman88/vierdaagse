@@ -12,11 +12,11 @@
 
     <li>
         <a class="list-group-item list-group-item-action list-group-item-primary"
-        href="/school/{{ $school->id }}">{{ $school->schoolname }}
-
-        <span class="text-secondary">Contactpersoon: {{ $school->contact }}</span></a>
+        href="/school/{{ $school->id }}"><b>{{ $school->schoolname }} </b>
+        <span class="text-secondary">Tour: {{ $school->tour_id }}</span>
+        <span class="text-secondary">Aantal deelnemers: {{ $school->group_size }}</span>
+    </a>
     </li>
-
     @endforeach
 </ul>
 </div>
