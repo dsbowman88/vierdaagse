@@ -17,6 +17,7 @@ class CreateSchoolsTable extends Migration
             $table->increments('id');
             $table->string('schoolname');
             $table->unsignedInteger('group_size');
+            $table->unsignedInteger('tour_id');
             $table->string('contact');
             $table->string('email');
             $table->string('phonenumber');
