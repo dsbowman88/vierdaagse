@@ -4,7 +4,7 @@
 
 	<h1 class="title">Edit a School</h1>
 
-	<form method="post" action="/school">
+	{{-- <form method="post" action="/school">
 		{{ csrf_field() }}
 
 		<div class="field">
@@ -17,4 +17,4 @@
 			</div>
 
 	    </div>
-    </form>
+    </form> --}}
