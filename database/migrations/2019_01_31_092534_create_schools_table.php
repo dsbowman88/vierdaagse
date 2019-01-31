@@ -18,6 +18,7 @@ class CreateSchoolsTable extends Migration
             $table->string('schoolname');
             $table->unsignedInteger('group_size');
             $table->unsignedInteger('tour_id');
+            $table->unsignedInteger('user_id');
             $table->string('contact');
             $table->string('email');
             $table->string('phonenumber');
@@ -25,7 +26,7 @@ class CreateSchoolsTable extends Migration
             $table->timestamps();
 
             $table->foreign('tour_id')->references('id')->on('tours');
-
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
