@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <h1>Wijzig of verwijder inschrijving</h1>
-<form method="POST" action="/runner/{{ $runner->id }}">
+<form method="POST" action="/participant/{{ $participant->id }}">
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
     <div class="field">
@@ -20,9 +20,9 @@
         <label class="label" for="distance">Afstand:</label>
         <div class="control">
             <select name="distance">
-                <option value="5">5 KM</option>
-                <option value="10">10 KM</option>
-                <option value="15">15 KM</option>
+                <option value="1">5 KM</option>
+                <option value="2">10 KM</option>
+                <option value="3">15 KM</option>
             </select>
         </div>
     </div>

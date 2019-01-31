@@ -14,6 +14,7 @@
             <option value="2">10 KM</option>
             <option value="3">15 KM</option>
         </select><br>
+        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
         <button class="btn btn-info shadow" type="submit">Submit</button><br>
         @include('error')
     </form>

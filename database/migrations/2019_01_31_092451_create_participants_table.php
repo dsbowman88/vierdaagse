@@ -18,12 +18,12 @@ class CreateParticipantsTable extends Migration
             $table->string('name');
             $table->string('email');
 //            $table->unsignedInteger('school_id'); // Not needed
-            $table->unsignedInteger('tour_id');
+            $table->unsignedInteger('tour_id'); //ombouwen naar tour_distance
             $table->unsignedInteger('user_id');
             $table->timestamps();
 
 //            $table->foreign('school_id')->references('id')->on('schools'); // Not needed
-            $table->foreign('tour_id')->references('id')->on('tours');
+            $table->foreign('tour_id')->references('id')->on('tours'); //ombouwen naar tour_distance
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

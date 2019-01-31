@@ -11,8 +11,8 @@
 <body>
     <nav class="navbar sticky-top navbar-dark bg-dark">
         <a class="nav-link font-weight-bold text-white" href="/">Home</a>
-        <a class="nav-link font-weight-bold" href="/runner">Runner Lijst</a>
-        <a class="nav-link font-weight-bold" href="/runner/create">Nieuwe Runner aanmelden</a>
+        <a class="nav-link font-weight-bold" href="/participant">Deelnemer Lijst</a>
+        <a class="nav-link font-weight-bold" href="/participant/create">Nieuwe Deelnemer aanmelden</a>
     </nav>
     <div class="container">
         @yield('content')
