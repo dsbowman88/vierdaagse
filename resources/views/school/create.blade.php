@@ -5,7 +5,7 @@
 	<h1 class="title">Schrijf een school in</h1>
 
 	<form method="post" action="/school">
-		{{ csrf_field() }}
+		@csrf
 
 		<div class="field">
 			<label class="label" for="schoolname">School name</label>
