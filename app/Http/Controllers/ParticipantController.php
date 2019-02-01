@@ -82,6 +82,7 @@ class ParticipantController extends Controller
      */
     public function update(Request $request, Participant $participant)
     {
+        // hier de max-deelnemers check nog implementeren
         $this->authorize('update', $participant);
         $participant->update(request()->validate([
             'name' => 'required',
