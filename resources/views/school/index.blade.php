@@ -11,7 +11,7 @@
     @foreach ($schools as $school)
 
     <li>
-        <a class="list-group-item list-group-item-action list-group-item-primary"
+        <a class="m-2 list-group-item list-group-item-action list-group-item-primary"
         href="/school/{{ $school->id }}"><b>{{ $school->schoolname }} </b>
         <span class="text-secondary">Tour: {{ $school->tour_id }}</span>
         <span class="text-secondary">Aantal deelnemers: {{ $school->group_size }}</span>

@@ -2,8 +2,8 @@
 @section('content')
 <h1>Wijzig of verwijder inschrijving</h1>
 <form method="POST" action="/participant/{{ $participant->id }}">
-    {{ csrf_field() }}
-    {{ method_field('PATCH') }}
+    @csrf
+    @method('PATCH')
     <div class="field">
         <label class="label" for="name">Naam:</label>
         <div class="control">

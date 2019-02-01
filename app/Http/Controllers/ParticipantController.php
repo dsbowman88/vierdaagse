@@ -40,6 +40,7 @@ class ParticipantController extends Controller
             'email' => 'required',
             'tour_id' => 'required',
             'user_id' => 'required']));
+        return redirect('/participant');
     }
 
     /**
