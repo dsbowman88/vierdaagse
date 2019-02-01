@@ -44,7 +44,7 @@ class SchoolController extends Controller
             'email' => 'required',
             'phonenumber' => 'required',
             'tour_id' => 'required',
-            'user_id' => auth()->id()]));
+            'user_id' => 'required']));
     }
 
     /**
