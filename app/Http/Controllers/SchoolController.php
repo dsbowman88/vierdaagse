@@ -78,7 +78,15 @@ class SchoolController extends Controller
      */
     public function update(Request $request, School $school)
     {
-        //
+        $school->update(request()->validate([
+            'schoolname' => 'required',
+            'group_size' => 'required',
+            'contact' => 'required',
+            'email' => 'required',
+            'phonenumber' => 'required',
+            'tour_id' => 'required',
+            'user_id' => 'required']));
+
     }
 
     /**
