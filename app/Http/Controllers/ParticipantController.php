@@ -77,12 +77,11 @@ class ParticipantController extends Controller
     public function update(Request $request, Participant $participant)
     {
         $this->authorize('update', $participant);
-        request()->validate([
+        $participant->update(request()->validate([
             'name' => 'required',
             'email' => 'required',
-            'distance' => 'required'
-        ]);
-        $participant->update(request(['name', 'email', 'distance']));
+            'tour_id' => 'required'
+        ]));
         return redirect('/participant');
     }
 
