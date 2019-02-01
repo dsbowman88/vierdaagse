@@ -99,6 +99,9 @@ class SchoolController extends Controller
      */
     public function destroy(School $school)
     {
-        //
+        // $this->authorize('update', $school);
+
+        $school->delete();
+        return redirect('/school');
     }
 }
