@@ -45,6 +45,7 @@ class SchoolController extends Controller
             'phonenumber' => 'required',
             'tour_id' => 'required',
             'user_id' => 'required']));
+            return redirect('/school');
     }
 
     /**
@@ -86,6 +87,7 @@ class SchoolController extends Controller
             'phonenumber' => 'required',
             'tour_id' => 'required',
             'user_id' => 'required']));
+            return redirect('/school');
 
     }
 

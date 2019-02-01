@@ -21,12 +21,16 @@
 		</div>
     </div>
 
-	<div class="field">
-		<label class="label" for="tour_id">Tour</label>
-		<div class="control">
-			<input type="number" class="input" name="tour_id" >
-		</div>
-	</div>
+    <div class="field">
+        <label class="label" for="tour_id">Afstand:</label>
+        <div class="control">
+            <select name="tour_id">
+                <option value="1">5 KM</option>
+                <option value="2">10 KM</option>
+                <option value="3">15 KM</option>
+            </select>
+        </div>
+    </div>
 
 	<div class="field">
 		<label class="label" for="contact">Contactpersoon</label>

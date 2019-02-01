@@ -23,7 +23,7 @@
     </div>
 
     <div class="field">
-        <label class="label" for="distance">Afstand:</label>
+        <label class="label" for="tour_id">Afstand:</label>
         <div class="control">
             <select name="tour_id">
                 <option value="1">5 KM</option>
