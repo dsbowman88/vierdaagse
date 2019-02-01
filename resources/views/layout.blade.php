@@ -12,9 +12,10 @@
     <nav class="navbar sticky-top navbar-dark bg-dark">
         <a class="nav-link font-weight-bold text-white" href="/">Home</a>
         <a class="nav-link font-weight-bold" href="/participant">Deelnemer Lijst</a>
-        <a class="nav-link font-weight-bold" href="/participant/create">Nieuwe Deelnemer aanmelden</a>
-        <a class="nav-link font-weight-bold" href="/school">Scholen</a>
-        <a class="nav-link font-weight-bold" href="/tour">Routes</a>
+        <a class="nav-link font-weight-bold" href="/participant/create">Aanmelden Deelnemer</a>
+        <a class="nav-link font-weight-bold text-success" href="/school">Scholen</a>
+        <a class="nav-link font-weight-bold text-success" href="/school/create">Aanmelden School</a>
+        <a class="nav-link font-weight-bold text-warning" href="/tour">Routes</a>
     </nav>
     <div class="container">
         @yield('content')

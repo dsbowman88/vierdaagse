@@ -35,15 +35,11 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        $authuser = auth()->id();
-        // Participant::create(request()->validate([
-        //     'name' => 'required',
-        //     'email' => 'required',
-        //     'tour_id' => 'required',
-        //     'user_id' => $authuser])); // validate function won't work like this
-        Participant::create(request([
-            'name', 'email', 'tour_id', 'user_id'
-        ]));
+        Participant::create(request()->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'tour_id' => 'required',
+            'user_id' => 'required']));
     }
 
     /**
@@ -54,6 +50,7 @@ class ParticipantController extends Controller
      */
     public function show(Participant $participant)
     {
+        $this->authorize('update', $participant);
         return view('participant.show', compact('participant'));
     }
 
@@ -65,6 +62,7 @@ class ParticipantController extends Controller
      */
     public function edit(Participant $participant)
     {
+        $this->authorize('update', $participant);
         return view('participant.edit', compact('participant'));
     }
 
@@ -77,6 +75,7 @@ class ParticipantController extends Controller
      */
     public function update(Request $request, Participant $participant)
     {
+        $this->authorize('update', $participant);
         request()->validate([
             'name' => 'required',
             'email' => 'required',
@@ -94,6 +93,7 @@ class ParticipantController extends Controller
      */
     public function destroy(Participant $participant)
     {
+        $this->authorize('update', $participant);
         $participant->delete();
         return redirect('/participant');
     }
