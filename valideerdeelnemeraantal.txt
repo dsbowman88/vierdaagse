@@ -1,0 +1,11 @@
+select count(id) from participants
+
+select sum(group_size) from schools
+
+
+optellen
+
+
+valideren bij invoer/aanpassen school en individu
+
+
