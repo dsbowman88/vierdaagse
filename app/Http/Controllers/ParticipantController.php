@@ -35,7 +35,7 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        // Max 500 anders geen store
+        // Max 500 participants anders geen store
         if (Participant::all()->count() > 500){
             dd('Too many participants');
         };
