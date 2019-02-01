@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\School;
 use Illuminate\Http\Request;
 

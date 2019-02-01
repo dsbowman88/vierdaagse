@@ -5,12 +5,6 @@
 <div class="list-group">
 <ul>
     <?php
-                $testvalue = DB::table('schools')
-                ->selectRaw('SUM(group_size) as tot')
-                ->pluck('tot');
-
-echo "waarde:".$testvalue;
-
 
         $schools=App\School::all()
     ?>
