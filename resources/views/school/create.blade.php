@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1 class="title">Create a New School</h1>
+	<h1 class="title">Schrijf een school in</h1>
 
 	<form method="post" action="/school">
 		{{ csrf_field() }}
@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="field">
-		<label class="label" for="contact">Contact person</label>
+		<label class="label" for="contact">Contactpersoon</label>
 		<div class="control">
 			<input type="text" class="input" name="contact" >
 		</div>

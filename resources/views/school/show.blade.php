@@ -8,6 +8,6 @@
 <h3>Email: {{ $school->email }}</h3>
 <h3>Telefoon: {{ $school->phonenumber }}</h3>
 
-<button class="btn btn-info"><a class="text-dark font-weight-bold" href="/runner/{{$school->id}}/edit">Edit</a></button>
+<button class="btn btn-info"><a class="text-dark font-weight-bold" href="/school/{{$school->id}}/edit">Edit</a></button>
 
 @endsection
