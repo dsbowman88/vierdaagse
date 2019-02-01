@@ -13,6 +13,8 @@
         <a class="nav-link font-weight-bold text-white" href="/">Home</a>
         <a class="nav-link font-weight-bold" href="/participant">Deelnemer Lijst</a>
         <a class="nav-link font-weight-bold" href="/participant/create">Nieuwe Deelnemer aanmelden</a>
+        <a class="nav-link font-weight-bold" href="/school">Scholen</a>
+        <a class="nav-link font-weight-bold" href="/tour">Routes</a>
     </nav>
     <div class="container">
         @yield('content')

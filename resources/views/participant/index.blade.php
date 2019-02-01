@@ -8,7 +8,7 @@
     @foreach ($participants as $participant)
     <li>
         <a class="list-group-item list-group-item-action list-group-item-primary" href="/participant/{{ $participant->id }}">{{ $participant->name }}
-        <span class="text-secondary">Afstand: {{ DB::table('tours')->where('id', $participant->tour_id)->pluck('distance') }} KM</span></a>
+        <span class="text-secondary">Afstand: {{ DB::table('tours')->where('id', $participant->tour_id)->value('distance') }} KM</span></a>
     </li>
     @endforeach
 </ul>
