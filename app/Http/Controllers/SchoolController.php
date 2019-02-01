@@ -67,6 +67,7 @@ class SchoolController extends Controller
      */
     public function edit(School $school)
     {
+        $this->authorize('update', $school);
         return view('school.edit', compact('school'));
     }
 
@@ -79,6 +80,7 @@ class SchoolController extends Controller
      */
     public function update(Request $request, School $school)
     {
+        $this->authorize('update', $school);
         $school->update(request()->validate([
             'schoolname' => 'required',
             'group_size' => 'required',
@@ -99,7 +101,7 @@ class SchoolController extends Controller
      */
     public function destroy(School $school)
     {
-        // $this->authorize('update', $school);
+        $this->authorize('update', $school);
 
         $school->delete();
         return redirect('/school');
