@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="/tour">Tours</a>
+                    <a href="/tour">Routes</a>
                     <a href="/school">Schools</a>
                     <a href="/participant">Participants</a>
                 </div>
