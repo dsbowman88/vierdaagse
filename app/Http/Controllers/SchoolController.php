@@ -92,6 +92,15 @@ class SchoolController extends Controller
     public function update(Request $request, School $school)
     {
         $this->authorize('update', $school);
+
+        // Max 500 participants anders geen store
+        if (School::fgroupTotal($request->get('group_size')) > 500){
+            $error = \Illuminate\Validation\ValidationException::withMessages([
+            'group_size' => ['Too many participants, try entering less'],
+            ]);
+            throw $error;
+        };
+
         $school->update(request()->validate([
             'schoolname' => 'required',
             'group_size' => 'required',

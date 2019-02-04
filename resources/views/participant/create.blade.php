@@ -5,7 +5,7 @@
     <form action="/participant" method="post">
             @csrf
         <label for="naam" class="label">Naam:</label>
-        <input type="text" name="name" class="form-control shadow {{$errors->has('naam') ? 'border-danger' : ''}}" placeholder="Naam Runner" value="{{ old('naam') }}"><br>
+        <input type="text" name="name" class="form-control shadow {{$errors->has('naam') ? 'border-danger' : ''}}" placeholder="Naam Runner" value="{{ old('name') }}"><br>
         <label for="email" class="label">Email:</label>
         <input type="text" name="email" class="form-control shadow {{$errors->has('email') ? 'border-danger' : ''}}"placeholder="Email" value="{{ old('email') }}"><br>
         <label for="tour_id" class="label">Afstand:</label>

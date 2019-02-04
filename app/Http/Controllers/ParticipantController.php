@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\School;
 use App\Participant;
 use Illuminate\Http\Request;
 use DB;
@@ -36,23 +37,26 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        // Max 500 participants anders geen store
-        // if (Participant::all()->count() > 500){
+        //
+        if (School::fgroupTotal($request->get('group_size')) > 500){
+            $error = \Illuminate\Validation\ValidationException::withMessages([
+            'group_size' => ['Registrations are currently closed, too many participants'],
+            ]);
+            throw $error;
+        };
+
+        // // Max 500 participants + school groupsize
+        // $countp = Participant::all()->count();
+        // $counts = DB::table('schools')->get()->pluck('group_size');
+        // $tot = 0;
+        // foreach ($counts as $count) {
+        //     $tot = $tot + $count;
+        // }
+        // $totaal = $tot + $countp;
+
+        // if ($totaal > 500){
         //     dd('Too many participants');
         // };
-
-        // Max 500 participants + school groupsize
-        $countp = Participant::all()->count();
-        $counts = DB::table('schools')->get()->pluck('group_size');
-        $tot = 0;
-        foreach ($counts as $count) {
-            $tot = $tot + $count;
-        }
-        $totaal = $tot + $countp;
-
-        if ($totaal > 500){
-            dd('Too many participants');
-        };
 
         //
         Participant::create(request()->validate([

@@ -15,7 +15,7 @@
         <a class="m-2 list-group-item list-group-item-action list-group-item-primary"
         href="/school/{{ $school->id }}"><b>{{ $school->schoolname }} </b>
         <span class="text-secondary">Route: {{ DB::table('tours')->where('id', $school->tour_id)->value('distance') }} KM</span>
-        <span class="text-secondary">Aantal deelnemers: {{ $school->group_size }}</span>
+        <span class="text-success">Aantal deelnemers: {{ $school->group_size }}</span>
     </a>
     </li>
     @endforeach

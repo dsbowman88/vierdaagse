@@ -29,6 +29,7 @@
     <div>
         <button class="button is-link" type="submit">Update Inschrijving</button>
     </div>
+    @include('error')
 </form>
 <form action="/participant/{{$participant->id}}" method="post">
     @csrf
