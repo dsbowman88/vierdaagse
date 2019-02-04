@@ -26,6 +26,7 @@ class SchoolController extends Controller
      */
     public function create()
     {
+
         return view('school.create');
 
     }
@@ -39,10 +40,10 @@ class SchoolController extends Controller
     public function store(Request $request)
     {
                 // Max 500 participants anders geen store
-
-                // if (School::all()->sum() > 500){
-                //     dd('Too many participants');
-                // };
+// dd($request);
+                 if (School::fgroupTotal($request->get('group_size')) > 500){
+                     return redirect('/school');
+                 };
 
         School::create(request()->validate([
             'schoolname' => 'required',
