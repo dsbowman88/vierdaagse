@@ -62,15 +62,7 @@
 	</div>
 
     {{-- als een error verschijnt, dan pas de error-balk tonen --}}
-@if ($errors->any())
-	<div class="notification is-danger">
-		<ul>
-			@foreach ($errors->all() as $error)
-				<li>{{ $error }}</li>
-			@endforeach
-		</ul>
-	</div>
-@endif
+    @include('error')
 
 </form>
 

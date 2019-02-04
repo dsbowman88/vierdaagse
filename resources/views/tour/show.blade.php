@@ -6,7 +6,7 @@
     $schools = App\School::all();
 ?>
 
-<h1>Tour: {{ $tour->distance }} KM</h1>
+<h1>Route: {{ $tour->distance }} KM</h1>
 <h3>Scholen:</h3> <br>
 @foreach ($schools as $school)
     @if ($school->tour_id == $tour->id)

@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<h1 class="">Tours</h1>
+<h1 class="">Route</h1>
 <div class="list-group">
 <ul>
     <?php

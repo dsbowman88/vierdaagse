@@ -39,11 +39,13 @@ class SchoolController extends Controller
      */
     public function store(Request $request)
     {
-                // Max 500 participants anders geen store
-// dd($request);
-                 if (School::fgroupTotal($request->get('group_size')) > 500){
-                     return redirect('/school');
-                 };
+        // Max 500 participants anders geen store
+        if (School::fgroupTotal($request->get('group_size')) > 500){
+            $error = \Illuminate\Validation\ValidationException::withMessages([
+            'group_size' => ['Too many participants, try entering less'],
+            ]);
+            throw $error;
+        };
 
         School::create(request()->validate([
             'schoolname' => 'required',
