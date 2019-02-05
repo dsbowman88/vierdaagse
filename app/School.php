@@ -21,4 +21,18 @@ class School extends Model
 
     }
 
+    static function ftourTotal($id) {
+        $schoolTourTotal = DB::table('schools')
+        ->selectRaw('SUM(group_size) as tot')
+        ->where('tour_id', $id)
+        ->value('tot');
+
+        $partTotal = count(DB::table('participants')
+        ->where('tour_id', $id)->get());
+
+        $overallTotal = $partTotal + $schoolTourTotal;
+
+        return $overallTotal;
+    }
+
 }
