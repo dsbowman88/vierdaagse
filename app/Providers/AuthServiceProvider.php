@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::before(function ($user){
-            if ($user->id == 1){ // Hardcoded op 1
+            if ($user->id <= 2){ // Hardcoded op 1
                 return true;
             };
         });
